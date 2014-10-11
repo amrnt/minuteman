@@ -10,7 +10,7 @@ class Minuteman
 
     attr_reader :key
 
-    DATE_FORMAT = "%s-%02d-%02d"
+    DATE_FORMAT = "%s:%02d:%02d"
     TIME_FORMAT = "%02d:%02d"
 
     # Public: Initializes the base TimeSpan class
@@ -30,7 +30,7 @@ class Minuteman
     #   date       - A given Time object
     #
     def build_key(event_name, date)
-      [Minuteman::PREFIX, event_name, date.join("-")].join("_")
+      [Minuteman::PREFIX, event_name, date.join("-")].join(":")
     end
   end
 end

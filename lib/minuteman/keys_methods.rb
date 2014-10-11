@@ -17,7 +17,7 @@ class Minuteman
         BIT_OPERATION_PREFIX,
         type,
         events.join("-")
-      ].join("_")
+      ].join(":")
     end
   end
 end
